@@ -1,23 +1,23 @@
 $roboto-font-path: "~roboto-fontface/fonts" !default;
 @import "~roboto-fontface/css/roboto/sass/roboto-fontface";
 
-/*** Scroll bar scustomization ***/
-body::-webkit-scrollbar
-{
-	width: 1rem;
-}
+/* Scroll bar scustomization */
+  body::-webkit-scrollbar
+  {
+    width: 1rem;
+  }
 
-body::-webkit-scrollbar-track
-{
-	background-color: white; 
-}
+  body::-webkit-scrollbar-track
+  {
+    background-color: white; 
+  }
 
-body::-webkit-scrollbar-thumb
-{
-	background-color: #1976D2; 
-	border-radius: 0.5rem;
-}
-/*** Scroll bar scustomization ***/
+  body::-webkit-scrollbar-thumb
+  {
+    background-color: #1976D2; 
+    border-radius: 0.5rem;
+  }
+/* Scroll bar scustomization */
 
 body
 {
@@ -29,4 +29,84 @@ body
   background-color: rgb(220, 220, 220);
   margin: 20px 0px;
   height: 2px;
+}
+
+
+.pageContainer
+{
+  padding: 0px 1rem;
+  margin-bottom: 50px;
+}
+
+.pageTitle
+{
+  font-size: 22px;
+  font-weight: 600;
+  color: #565656;
+  margin: 2rem 12rem;
+}
+
+.pageContent
+{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px
+}
+
+.mandatory
+{
+  color: rgb(221, 0, 49);
+}
+
+.textFeild label
+{
+    display: block;
+    font-size: 14px;
+    margin: 5px 0px;
+    color: #565656;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.textFeild input
+{
+    height: 40px;
+    width: 20rem;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1976D2;
+    padding-left: 16px;
+    border: 1.5px solid gainsboro;
+    outline: none;
+    border-radius: 18px;
+}
+
+.unactiveButton
+{
+    height: 43px;
+    width: 13rem;
+    margin-top: 1.7rem;
+    background: #aaaaaa;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 18px;
+    outline: none;
+}
+
+.activeButton
+{
+    height: 43px;
+    width: 13rem;
+    margin-top: 1.7rem;
+    background-color: #1976D2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 18px;
+    outline: none;
+    cursor: pointer;
 }

@@ -1,0 +1,33 @@
+
+
+<!-- data-collection -->
+<div class="pageContainer">
+
+    <div class="pageTitle">Data Clasification</div>
+
+    <div class="pageContent">
+
+        <!-- directry path -->
+        <div class="textFeild">
+            <label for="API URL">Directry Path <span class="mandatory">*</span></label>
+            <input type="text" [(ngModel)]="path">
+        </div>
+        <!-- directry path -->
+
+        <!-- run button -->
+            <button [ngClass]="pageStatus()? 'activeButton': 'unactiveButton'" 
+            [disabled]="!pageStatus()" 
+            (click)="collectData()">Generate Label</button>
+        <!-- run button -->
+
+        <!-- generated-tag -->
+        <div class="result-container" [ngStyle]="{'visibility':generatedTag ? 'visible' : 'hidden'}">
+            <p class="key">Generated tag: <span class="value">{{ generatedTag }}</span></p>
+        </div>
+        <!-- generated-tag -->
+
+    </div>
+
+</div>
+<!-- data-collection -->
+

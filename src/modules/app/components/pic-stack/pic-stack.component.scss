@@ -8,18 +8,37 @@
 
 #stack
 {
-
-    .pic
-    {
-        
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
 
     .pic-container
     {
-        display: inline-block;
         background-color: white;
         padding: 5px;
-        margin-top: 20px;
+        margin: 5px;
+
+        img::before
+        {
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        img 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
     }
 
     .action-bar

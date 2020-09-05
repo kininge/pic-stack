@@ -1,0 +1,45 @@
+
+#navigation-bar
+{
+    padding: 0px 1rem;
+    box-sizing: border-box;
+}
+
+#navigation-bar ul
+{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#navigation-bar li
+{
+    display: contents;
+    height: 60px;
+}
+
+.unactive
+{
+    display: flex;
+    justify-content: center;
+    color: #565656;
+    font-size: 1.17rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 18.5px 20px;
+}
+
+.active
+{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #1976D2;
+    border-radius: 3rem;
+    font-size: 1.17rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 18.5px 20px;
+}

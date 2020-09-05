@@ -1,0 +1,29 @@
+
+<!-- navigation-bar -->
+    <div id="navigation-bar">
+
+        <ul>
+
+            <li routerLinkActive="active" (click)="checkTab('data-collection')">
+                <a [ngClass]="currentTab== 'data-collection'? 'active' : 'unactive'" routerLink="/data-collection">Data collection</a>
+            </li>
+
+            <li routerLinkActive="active" (click)="checkTab('pre-processing')">
+                <a [ngClass]="currentTab== 'pre-processing'? 'active' : 'unactive'" routerLink="/pre-processing">Pre Processing</a>
+            </li>
+
+            <li routeLinkActive="active" (click)="checkTab('data-clasification')">
+                <a [ngClass]="currentTab== 'data-clasification'? 'active' : 'unactive'" routerLink="/data-clasification">Data Classification</a>
+            </li>
+
+            <li routerLinkActive="active" (click)="checkTab('data-augmentation')">
+                <a [ngClass]="currentTab== 'data-augmentation'? 'active' : 'unactive'" routerLink="/data-augmentation">Data Augmentation</a>
+            </li>
+
+        </ul>
+
+        <div class="horizontal-line"></div>
+
+    </div>
+<!-- navigation-bar -->
+

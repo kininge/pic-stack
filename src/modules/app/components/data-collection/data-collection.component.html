@@ -1,0 +1,32 @@
+
+<!-- data-collection -->
+    <div class="pageContainer">
+
+        <div class="pageTitle">Data Collection</div>
+
+        <div class="pageContent">
+            
+            <!-- API URL -->
+                <div class="textFeild">
+                    <label for="API URL">API URL <span class="mandatory">*</span></label>
+                    <input type="text" [(ngModel)]="apiUrl">
+                </div>
+            <!-- API URL -->
+
+            <!-- parameters -->
+                <div class="textFeild">
+                    <label for="parameter">Parameters <span class="mandatory">*</span></label>
+                    <input type="text" [(ngModel)]="parameter">
+                </div>
+            <!-- parameters -->
+
+            <!-- run button -->
+                <button [ngClass]="pageStatus()? 'activeButton': 'unactiveButton'" 
+                [disabled]="!pageStatus()" 
+                (click)="collectData()">Run</button>
+            <!-- run button -->
+
+        </div>
+
+    </div>
+<!-- data-collection -->

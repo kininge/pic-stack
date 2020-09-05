@@ -1,0 +1,96 @@
+
+
+<!-- data-collection -->
+<div class="pageContainer">
+
+    <div class="pageTitle">Data Augmentation</div>
+
+    <div class="pageContent">
+
+        <!-- directry path -->
+        <div class="singleFeild">
+            <label for="directry path">Directry Path <span class="mandatory">*</span></label>
+            <input type="text" [(ngModel)]="path">
+        </div>
+        <!-- directry path -->
+
+    </div>
+
+    <div class="pageContent">
+
+        <!-- drotation -->
+        <div class="rangeFeild">
+            <label >Rotation <span class="mandatory">*</span></label>
+            <div class="range-container">
+                <p>{{ rotation }}</p>
+                <input type="range" min="0" max="180" step="1" [(ngModel)]="rotation">
+            </div>
+            
+        </div>
+        <!-- rotation -->
+
+        <!-- width shift -->
+        <div class="rangeFeild">
+            <label >Width Shift <span class="mandatory">*</span></label>
+            <div class="range-container">
+                <p>{{ widthShift }}</p>
+                <input type="range" min="0.0" max="1.0" step="0.1" [(ngModel)]="widthShift">
+            </div>
+        </div>
+        <!-- width shift -->
+
+        <!-- height shift -->
+        <div class="rangeFeild">
+            <label >Height Shift <span class="mandatory">*</span></label>
+            <div class="range-container">
+                <p>{{ heightShift }}</p>
+                <input type="range" min="0.0" max="1.0" step="0.1" [(ngModel)]="heightShift">
+            </div>
+        </div>
+        <!-- height shift -->
+
+    </div>
+
+    <div class="pageContent">
+
+        <!-- shear -->
+        <div class="rangeFeild">
+            <label >Share <span class="mandatory">*</span></label>
+            <div class="range-container">
+                <p>{{ share }}</p>
+                <input type="range" min="0.0" max="1.0" step="0.1" [(ngModel)]="share">
+            </div>
+            
+        </div>
+        <!-- shear -->
+
+        <!-- zoom -->
+        <div class="rangeFeild">
+            <label >Zoom <span class="mandatory">*</span></label>
+            <div class="range-container">
+                <p>{{ zoom }}</p>
+                <input type="range" min="0.0" max="1.0" step="0.1" [(ngModel)]="zoom">
+            </div>
+        </div>
+        <!-- zoom -->
+
+        <!-- horizontal-flip -->
+        <div class="checkFeild">
+            <label >Horizontal Flip <span class="mandatory">*</span></label>
+            <input type="checkbox" [(ngModel)]="horizontalFlip">
+        </div>
+        <!-- horizontal-flip -->
+
+    </div>
+
+    <div class="pageContent">
+        <!-- run button -->
+            <button [ngClass]="pageStatus()? 'activeButton': 'unactiveButton'" 
+            [disabled]="!pageStatus()" 
+            (click)="collectData()">Augment</button>
+        <!-- run button -->
+    </div>
+
+
+</div>
+<!-- data-collection -->

@@ -8,10 +8,9 @@
 
         <div id="stack">
             <div class="pic-container" *ngFor="let pic of picStack">
-                <img class="pic"  src="{{ pic }}" alt="pic">
+                <img src="{{ pic.download_url }}" alt="{{ pic.author }}" />
                 <div class="action-bar"></div>
             </div>
-            
         </div>
 
     </div>

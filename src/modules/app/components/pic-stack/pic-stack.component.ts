@@ -1,7 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Component({
+interface Image
+{
+  id: string;
+  author: string;
+  width: number;
+  height: number;
+  url: string;
+  download_url: string;
+}
+
+@Component
+({
   selector: 'app-pic-stack',
   templateUrl: './pic-stack.component.html',
   styleUrls: ['./pic-stack.component.scss']
@@ -9,7 +20,7 @@ import { HttpClient } from '@angular/common/http';
 export class PicStackComponent implements OnInit 
 {
 
-  public picStack: string[] =[];
+  public picStack: Image[] =[];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,11 +28,15 @@ export class PicStackComponent implements OnInit
   {
     for(let index= 0; index< 50; index++)
     {
-      this.httpClient.get<{ message: string, status: string }>("https://dog.ceo/api/breeds/image/random")
+      // https://dog.ceo/api/breeds/image/random
+
+      this.httpClient.get<Image[]>("https://picsum.photos/v2/list")
       .subscribe(
         result=>
         {
-          this.picStack.push(result.message.replace(/'\'/g, ''));
+          console.log(result);
+          this.picStack= result;
+          console.log(this.picStack);
         },
         error=>
         {
