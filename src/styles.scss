@@ -1,6 +1,24 @@
 $roboto-font-path: "~roboto-fontface/fonts" !default;
 @import "~roboto-fontface/css/roboto/sass/roboto-fontface";
 
+/*** Scroll bar scustomization ***/
+body::-webkit-scrollbar
+{
+	width: 1rem;
+}
+
+body::-webkit-scrollbar-track
+{
+	background-color: white; 
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: #1976D2; 
+	border-radius: 0.5rem;
+}
+/*** Scroll bar scustomization ***/
+
 body
 {
   font-family: "Roboto", "Helvetica", "Arial", "sans-serif";
@@ -8,37 +26,7 @@ body
 
 .horizontal-line
 {
-    background-color: rgb(220, 220, 220);
-    margin: 10px 0px;
-    height: 2px;
+  background-color: rgb(220, 220, 220);
+  margin: 20px 0px;
+  height: 2px;
 }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
-
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
-
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
-
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
-  }
-
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }

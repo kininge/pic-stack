@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SearchBoxComponent implements OnInit 
 {
   public search: string= undefined;
-  public searchOption: string[]= ['People', 'Airoplane', 'Tree', 'Mask', 'Dog'];
+  public searchOption: string[]= ['People', 'Airoplane', 'Mountens', 'Cat', 'Car', 'Train', 'Bus', 'House', 'River', 'Farm', 'Code', 'Tree', 'Mask', 'Dog'];
   public searchInteligence: string[]= [];
 
   public inteligence: boolean= false;
