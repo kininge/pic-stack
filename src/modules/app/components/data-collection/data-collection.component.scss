@@ -2,3 +2,96 @@
 
 
 
+
+
+
+.radioOptions
+{
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    .typeOne
+    {
+        display: flex;
+        text-align: center;
+        margin-right: 40px;
+        
+        input
+        {
+            width: 25px;
+            height: 25px;
+            margin-top: 15px;
+        }
+
+        span
+        {
+            margin: 17px 0px 0px 10px;
+            font-size: 18px;
+            color: #565656;
+            font-weight: 700;
+        }
+    }
+    
+    .typeTwo
+    {
+        display: flex;
+        text-align: center;
+        margin-left: 40px;
+        
+        input
+        {
+            width: 25px;
+            height: 25px;
+            margin-top: 15px;
+        }
+
+        span
+        {
+            margin: 17px 0px 0px 10px;
+            font-size: 18px;
+            color: #565656;
+            font-weight: 700;
+        }
+    }
+}
+
+.textFeild
+{
+    label
+    {
+        display: block;
+        font-size: 14px;
+        margin: 5px 0px 5px 15px;
+        color: #565656;
+        font-weight: 700;
+    }
+
+    small
+    {
+        display: block;
+        font-size: 13px;
+        margin: 5px 0px 5px 15px;
+        color: rgb(170, 170, 170);
+        font-weight: 700;
+    }
+
+    textarea
+    {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px;
+        color: #1976D2;
+        border: 1.5px solid gainsboro;
+        outline: none;
+        width: 43rem;
+        margin-right: 30px;
+        border-radius: 0.8rem;
+    }
+}
+
+#someChanges
+{
+    margin-top: 3rem !important;
+}

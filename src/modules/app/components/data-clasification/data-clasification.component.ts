@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataClasificationComponent implements OnInit 
 {
+  
+
   public path: string= undefined;
   public generatedTag: string= undefined;
 

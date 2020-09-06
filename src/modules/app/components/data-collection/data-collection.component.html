@@ -4,7 +4,41 @@
 
         <div class="pageTitle">Data Collection</div>
 
-        <div class="pageContent">
+        <div class="radioOptions">
+
+            <div class="typeOne">
+                <input type="radio" value="image" name="collectionType" [(ngModel)]="collectionType" /> 
+                <span>Open Image</span>
+            </div>
+            
+            <div class="vertical-line"></div>
+
+            <div class="typeTwo">
+                <input type="radio" value="url" name="collectionType" [(ngModel)]="collectionType" /> 
+                <span>URL</span>
+            </div>
+            
+        </div>
+
+        <div class="pageContent" *ngIf="collectionType== 'image'">
+            
+            <!-- API URL -->
+                <div class="textFeild">
+                    <label >Images Collection<span class="mandatory">*</span></label>
+                    <small>Please enter ', ' for multiple image collections</small>
+                    <textarea rows="3" [(ngModel)]="images" (keyup)="getImage($event)"></textarea>
+                </div>
+            <!-- API URL -->
+
+            <!-- run button -->
+                <button id="someChanges" [ngClass]="pageStatus()? 'activeButton': 'unactiveButton'" 
+                [disabled]="!pageStatus()" 
+                (click)="collectData()">Run</button>
+            <!-- run button -->
+
+        </div>
+
+        <div class="pageContent" *ngIf="collectionType== 'url'">
             
             <!-- API URL -->
                 <div class="textFeild">
