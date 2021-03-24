@@ -1,4 +1,6 @@
 
+
+
 #content
 {
     background-color: rgb(240, 240, 240);
@@ -15,35 +17,110 @@
 
     .pic-container
     {
-        background-color: white;
-        padding: 5px;
         margin: 5px;
+        border-radius: 1rem;
 
-        img::before
+        .image-container
         {
-            content: '';
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-        }
-
-        img 
-        {
+            background-color: #ffffff;
+            min-height: 8rem;
+            border-radius: 1rem 1rem 0 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
+
+            img::before
+            {
+                content: '';
+                position: absolute;
+                //width: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            img 
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                border-radius: 1rem 1rem 0 0;
+            }
         }
     }
 
     .action-bar
     {
-        background-color: #1976D2;
-        min-height: 20px;
+        background-color: rgb(210, 210, 210);
+        min-height: 5rem;
+        font-weight: 600;
+        padding: 20px 16px;
+        border-radius: 0 0 1rem 1rem;
+
+        .title-container
+        {
+            display: flex;
+            margin-bottom: 12px;
+
+            .pic-id
+            {
+                width: 30%;
+                font-size: 40px;
+                font-weight: 800;
+                color: #1976D2;
+            }
+
+            .pic-title
+            {
+                width: 70%;
+                margin-top: 5px;
+                text-transform: capitalize;
+                color: rgb(86, 86, 86);
+            }
+        }
+
+        .pic-url
+        {
+            color: rgb(120, 120, 120);
+        }
+
+        .user-action-container
+        {
+            margin-top: 60px;
+            display: flex;
+            justify-content: flex-end;
+            
+            .user-action-add
+            {
+                font-weight: 600;
+                cursor: pointer;
+                background-color: #1976D2;
+                border: none;
+                outline: none;
+                color: #ffffff;
+                padding: 8px 20px;
+                border-radius: 7px;
+                font-size: 12px;
+                transition: color .15s ease-in-out, background-color .15s ease-in-out;
+            }
+
+            .user-action-remove
+            {
+                font-weight: 600;
+                cursor: pointer;
+                background-color: #e74c3c;
+                border: none;
+                outline: none;
+                color: #ffffff;
+                padding: 8px 20px;
+                border-radius: 7px;
+                font-size: 12px;
+                transition: color .15s ease-in-out, background-color .15s ease-in-out;
+            }
+        }
     }
 }

@@ -1,17 +1,41 @@
 
 
-
 <!-- prtoject content -->
-    <div id="content">
+<div id="content">
 
-        <div class="horizontal-line"></div>
+    <div id="stack">
+        <div class="pic-container" *ngFor="let pic of presentPics; let ind= index">
 
-        <div id="stack">
-            <div class="pic-container" *ngFor="let pic of picStack">
-                <img src="{{ pic.download_url }}" alt="{{ pic.author }}" />
-                <div class="action-bar"></div>
+            <!-- pic -->
+            <div class="image-container">
+                <img src="{{ pic.picURL }}" alt="{{ pic.picName }}" />
             </div>
-        </div>
+            <!-- pic -->
+            
+            <!-- pic-details -->
+            <div class="action-bar">
 
+                <!-- pic-title -->
+                <div class="title-container">
+
+                    <div class="pic-id">{{ ind+ 1 }}</div>
+                    <div class="pic-title">{{ pic.picName }}</div>
+
+                </div>
+                <!-- pic-title -->
+                
+                <div class="horizontal-line"></div>
+
+                <!-- pic-url -->
+                <small class="pic-url">{{ pic.picDateTime | date }}</small>
+                <!-- pic-url -->
+
+                
+            </div>
+            <!-- pic-details -->
+
+        </div>
     </div>
+
+</div>
 <!-- prtoject content -->

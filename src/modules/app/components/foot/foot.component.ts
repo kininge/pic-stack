@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './foot.component.html',
   styleUrls: ['./foot.component.scss']
 })
-export class FootComponent implements OnInit {
+export class FootComponent implements OnInit 
+{
+  public organization: string= 'Siemens';
 
   constructor() { }
 

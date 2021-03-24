@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataTransferService } from '../../services/data-transfer.service';
 
 @Component({
   selector: 'app-search-box',
@@ -8,41 +9,27 @@ import { Component, OnInit } from '@angular/core';
 export class SearchBoxComponent implements OnInit 
 {
   public search: string= undefined;
-  public searchOption: string[]= ['People', 'Airoplane', 'Mountens', 'Cat', 'Car', 'Train', 'Bus', 'House', 'River', 'Farm', 'Code', 'Tree', 'Mask', 'Dog'];
+  public searchOption: string[]= [];
   public searchInteligence: string[]= [];
+
+  public sortImage: string= "assets/sort.png";
 
   public inteligence: boolean= false;
 
-  constructor() { }
+  constructor(private dataTransfer: DataTransferService) { }
 
-  ngOnInit() { }
+  ngOnInit() 
+  { 
+  }
   
   searching()
   {
-    this.searchInteligence= [];
-
-    if(this.search.length> 0)
-    {
-      this.inteligence= true;
-
-      this.searchOption.forEach( record=> 
-      {
-        if( record.toLowerCase().includes(this.search.toLowerCase()))
-        {
-          this.searchInteligence.push(record);
-        }
-      });
-    }
-    else
-    {
-      this.inteligence= false;
-    }
-    
+    this.dataTransfer.updateSearch(this.search);
   }
 
-  optionSelected(selectedOption: string)
+  sortPics()
   {
-    this.search= selectedOption;
-    this.inteligence= false;
+    //this.sortImage= "assets/sort-blue.png";
+    this.dataTransfer.updateSortOrder(true);
   }
 }

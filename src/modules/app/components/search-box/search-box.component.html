@@ -7,35 +7,25 @@
 
             <div class="search-box-overall-container">
 
-                <div [ngClass]="inteligence? 'search-box-container-inteligence-open': 'search-box-container'">
+                <div class="search-box-container">
 
                     <div [ngClass]="inteligence? 'start-search-box-inteligence-open': 'start-search-box'">
                         <img id="search-icon" src="assets/search-solid.png" alt="search" width="24">
                     </div>
+
                     <input type="text" 
                     [(ngModel)]="search"
                     (keyup)="searching()"
-                    [ngClass]="inteligence? 'search-box-feild-inteligence-open': 'search-box-feild'" 
+                    class="search-box-feild" 
                     placeholder="Search images">
 
-                </div>
+                    <div class="vertical-line"></div>
 
-                <div [ngClass]="inteligence? 'inteligance-container': 'inteligance-container-hidden'">
+                    <button class="icon-button" (click)="sortPics()">
+                        <img [src]="sortImage" alt="sort" >
+                    </button>
 
-                    <div class="horizintal-line"></div>
 
-                    <div *ngIf="searchInteligence.length== 0">
-                        <ul><li class="basic-list">No result found</li></ul>
-                    </div>
-                    <div *ngIf="searchInteligence.length> 0">
-                        <ul>  
-                            <li *ngFor="let result of searchInteligence" (click)="optionSelected(result)"> 
-                                <img id="option-icon" src="assets/search-solid-option.png" alt="search" width="18">
-                                <span id="option">{{ result }}</span> 
-                            </li>             
-                        </ul>
-                    </div>
-                    
                 </div>
     
             </div>

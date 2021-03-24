@@ -1,4 +1,7 @@
 
+<input type="number" [(ngModel)]="inputNumber" (keyup)="printEachDigit($event)" />
+
+<p>printing output: {{ output.join(", ") }}</p>
 
 <!-- project pic-stack -->
 <div id="main-container">
@@ -6,26 +9,50 @@
     <!-- project header -->
         <div id="head">
 
-            <h1 id="project-title">Team Optimistic</h1>
-            
-            <app-project-details></app-project-details>
-
-            <app-search-box></app-search-box>
+            <img id="project-logo" [src]="projectLogo" alt="pick-stack">
+            <h1 id="project-title">{{ projectTitle }}</h1>
 
         </div>
     <!-- project header -->
 
-    <!-- prtoject content -->
-        <!--app-pic-stack></app-pic-stack-->
-    <!-- prtoject content -->
+    <!-- project details -->
+        <div id="details">
 
-    <!-- navigation-bar -->
-        <app-navigation-bar></app-navigation-bar>
-    <!-- navigation-bar -->
-    
-    <!-- navigated-content -->
-        <router-outlet></router-outlet>
-    <!-- navigated-content -->
+            <div class="horizontal-line"></div>
+
+            <app-project-details></app-project-details>
+
+        </div>
+    <!-- project details -->
+
+    <!-- user pics accept -->
+        <div id="user-input">
+
+            <div class="horizontal-line"></div>
+
+            <app-data-collection></app-data-collection>
+            
+        </div>
+    <!-- user pics accept -->
+
+    <!-- prtoject content -->
+        <div id="pic-stack">
+
+            <div class="horizontal-line"></div>
+
+            <!-- pic-stack filter -->
+                <div id="pic-stack-filter">
+
+                    <app-search-box></app-search-box>
+
+
+                </div>
+            <!-- pic-stack filter -->
+
+            <app-pic-stack></app-pic-stack>
+
+        </div>
+    <!-- prtoject content -->
 
     <!-- project footer -->
         <app-foot></app-foot>

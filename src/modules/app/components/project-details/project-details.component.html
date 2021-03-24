@@ -1,36 +1,36 @@
 
-<div class="horizontal-line"></div>
+
 
 <!-- project-details -->
     <div id="project-detail-container">
         
-        <!-- classification -->
+        <!-- user-input -->
             <div class="project-detail">
-                <img src="assets/fetch-web-images.png" alt="collection" width="80px">
-                <h3 class="project-detail-title">Collection</h3>
-                <p class="project-details-description">Images collect from multiple sources on internet</p>
+                <img [src]="projectDetails[0].detailLogo" [alt]="projectDetails[0].detailTitle" width="80px">
+                <h3 class="project-detail-title">{{ projectDetails[0].detailTitle }}</h3>
+                <p class="project-details-description">{{ projectDetails[0].detailDetails }}</p>
             </div>
-        <!-- classification -->
+        <!-- user-input -->
 
         <div class="vertical-line"></div>
         
-        <!-- clasification -->
+        <!-- pic-stack -->
             <div class="project-detail">
-                <img src="assets/classification-image.png" alt="clasification" width="80px">
-                <h3 class="project-detail-title">Clasification</h3>
-                <p class="project-details-description">Images clasify by objects it contains</p>
+                <img [src]="projectDetails[1].detailLogo" [alt]="projectDetails[1].detailTitle" width="80px">
+                <h3 class="project-detail-title">{{ projectDetails[1].detailTitle }}</h3>
+                <p class="project-details-description">{{ projectDetails[1].detailDetails }}</p>
             </div>
-        <!-- clasification -->
+        <!-- pic-stack -->
 
         <div class="vertical-line"></div>
 
-        <!-- augmentation -->
-            <div class="project-detail">
-                <img src="assets/augmentation-image.png" alt="augmentation" width="65px">
-                <h3 class="project-detail-title">Augmentation</h3>
-                <p class="project-details-description">Images augment by zoom and rotate</p>
+        <!-- filter -->
+            <div class="project-detail" style="margin-top: 10px;">
+                <img [src]="projectDetails[2].detailLogo" [alt]="projectDetails[2].detailTitle" width="65px">
+                <h3 class="project-detail-title">{{ projectDetails[2].detailTitle }}</h3>
+                <p class="project-details-description">{{ projectDetails[2].detailDetails }}</p>
             </div>
-        <!-- augmentation -->
+        <!-- filter -->
 
     </div>
 <!-- project-details -->

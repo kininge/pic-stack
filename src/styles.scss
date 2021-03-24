@@ -44,13 +44,27 @@ body
   margin-bottom: 50px;
 }
 
-.pageTitle
+.page-title-container
 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #565656;
-  margin: 2rem 12rem;
+  margin: 2rem 12rem 4rem;
+
+  .pageTitle
+  {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #565656;
+  }
+
+  .pageSubtitle
+  {
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+
 }
+
+
 
 .pageContent
 {
@@ -77,7 +91,6 @@ body
 .textFeild input
 {
     height: 40px;
-    width: 20rem;
     margin-right: 20px;
     font-size: 16px;
     font-weight: 600;
@@ -91,7 +104,7 @@ body
 .unactiveButton
 {
     height: 43px;
-    width: 13rem;
+    width: 8.5rem;
     margin-top: 1.7rem;
     background: #aaaaaa;
     border: none;
@@ -105,7 +118,7 @@ body
 .activeButton
 {
     height: 43px;
-    width: 13rem;
+    width: 8.5rem;
     margin-top: 1.7rem;
     background-color: #1976D2;
     border: none;
@@ -115,4 +128,26 @@ body
     border-radius: 18px;
     outline: none;
     cursor: pointer;
+}
+
+.icon-button
+{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 36px;
+  margin: 6px 25px 5px 0px;
+  cursor: pointer;
+
+  &:hover
+  {
+    background-color: #f0f0f0;
+  }
+
+  img
+  {
+    max-width: 18px;
+  }
 }

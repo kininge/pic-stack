@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Pic } from 'src/modules/app/interfaces/pic';
+import { DataTransferService } from '../../services/data-transfer.service';
 
 @Component({
   selector: 'app-data-collection',
@@ -8,77 +10,36 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataCollectionComponent implements OnInit 
 {
-  public collectionType: string= 'image';
-  public response: boolean= false;
+  public imageURL: string= undefined;
+  public imageName: string= undefined;
 
-  public images: string= undefined;
-  public imagesList: string[]= [];
+  constructor(private httpClient: HttpClient, private dataTransfer: DataTransferService) { }
 
-  public apiUrl: string= undefined;
-  public parameter: string= undefined;
-
-  constructor(private httpClient: HttpClient) { }
-
-  ngOnInit() {}
-
-  getImage()
+  ngOnInit() 
   {
-    this.imagesList= [];
-
-    if(this.images!= undefined)
-    {
-      this.imagesList= this.images.trim().split(', ');
-    }
+    
   }
 
   pageStatus()
   {
-    if(this.collectionType== 'url')
+    if(this.imageName && this.imageURL)
     {
-      if(this.apiUrl && this.parameter)
-      {
         return true;
-      }
-      else
-      {
-        return false;
-      }
     }
     else
     {
-      if(this.imagesList.length> 0)
-      {
-        return true;
-      }
-      else
-      {
-        return false;
-      }
+      return false;
     }
   }
 
   collectData()
   {
-    if(this.collectionType== 'image')
-    {
-      this.httpClient.post('http://0.217.15.13:8000/download/openImages', { 'classList': this.imagesList })
-      .subscribe
-      {
-        result=>
-        {
-          console.log(result);
-        }
-        error=>
-        {
-          console.log(error);
-        }
-      }
-    }
+    const dateAndTimeNow= new Date()
+    const pic: Pic= { picName: this.imageName, picURL: this.imageURL, picDateTime: dateAndTimeNow };
+    this.dataTransfer.updatedImage(pic);
 
-    this.images= undefined;
-    this.imagesList= [];
-    this.apiUrl= undefined;
-    this.parameter= undefined;
+    this.imageURL= undefined;
+    this.imageName= undefined;
   }
 
 }
